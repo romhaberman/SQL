@@ -44,7 +44,7 @@ public class DataHelper {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    public class VerificationCode {
+    public static class VerificationCode {
         String code;
     }
 }

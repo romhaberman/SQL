@@ -23,7 +23,7 @@ public class SQLHelper {
     @SneakyThrows
     public static String getVerificationCode() {
         sleep(500);
-        var codeSQL = "SELECT * FROM auth_codes ORDER BY created DESC LIMIT 1";
+        var codeSQL = "SELECT code FROM auth_codes ORDER BY created DESC LIMIT 1";
         var conn = getConn();
         return QUERY_RUNNER.query(conn, codeSQL, new ScalarHandler<>());
     }
